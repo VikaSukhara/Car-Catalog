@@ -20,6 +20,7 @@ const Catalog = () => {
 
   const filteredCars = useSelector(selectFilteredCars);
 
+  
   return (
     <div style={{ marginTop: '30px' }}>
       <SearchForm />

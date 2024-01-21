@@ -20,8 +20,9 @@ const Catalog = () => {
     if(page === 1 && filteredCars.length) {
       return;
     }
-    dispatch(fetchCatalog(page));
-  }, [dispatch, page, filteredCars]);
+    dispatch(fetchCatalog(page)); 
+    //eslint-disable-next-line
+  }, [dispatch, page]);
 
   return (
     <div style={{ marginTop: '30px' }}>

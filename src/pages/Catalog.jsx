@@ -14,13 +14,15 @@ const Catalog = () => {
   const [page, setPage] = useState(1);
   const isLoading = useSelector(selectLoading);
 
-  useEffect(() => {
-    dispatch(fetchCatalog(page));
-  }, [dispatch, page]);
-
   const filteredCars = useSelector(selectFilteredCars);
 
-  
+  useEffect(() => {
+    if(page === 1 && filteredCars.length) {
+      return;
+    }
+    dispatch(fetchCatalog(page));
+  }, [dispatch, page, filteredCars]);
+
   return (
     <div style={{ marginTop: '30px' }}>
       <SearchForm />

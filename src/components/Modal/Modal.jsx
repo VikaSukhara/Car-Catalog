@@ -56,12 +56,12 @@ export const Modal = ({ car, close }) => {
             </Div>
           </TitleWrap>
           <ParagWrap>
-            <Parag>{car.address.slice(20)}</Parag>
-            <Parag>Id: {car.id}</Parag>
-            <Parag>Year: {car.year}</Parag>
-            <Parag>Type: {car.type}</Parag>
-            <Parag>FuelConsumption: {car.fuelConsumption}</Parag>
-            <Parag>EngineSize: {car.engineSize}</Parag>
+            <Parag>{car.address.slice(20)} |</Parag>
+            <Parag>Id: {car.id} |</Parag>
+            <Parag>Year: {car.year} |</Parag>
+            <Parag>Type: {car.type} |</Parag>
+            <Parag>FuelConsumption: {car.fuelConsumption} |</Parag>
+            <Parag>EngineSize: {car.engineSize} |</Parag>
           </ParagWrap>
 
           <Paragr>{car.description}</Paragr>

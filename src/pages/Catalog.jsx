@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCatalog } from '../redux/catalog/operations.jsx';
 import {
-  selectCars,
   selectFilteredCars,
   selectLoading,
 } from '../redux/catalog/selectors.jsx';

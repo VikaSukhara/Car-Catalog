@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/cars/static/css/main.fac01281.css",
-    "main.js": "/cars/static/js/main.ae9da9f6.js",
+    "main.js": "/cars/static/js/main.258f585f.js",
     "static/js/415.a004329c.chunk.js": "/cars/static/js/415.a004329c.chunk.js",
-    "static/js/752.3cc9cef3.chunk.js": "/cars/static/js/752.3cc9cef3.chunk.js",
-    "static/js/395.49a3b440.chunk.js": "/cars/static/js/395.49a3b440.chunk.js",
-    "static/js/55.504e6f5b.chunk.js": "/cars/static/js/55.504e6f5b.chunk.js",
+    "static/js/752.e1422ba5.chunk.js": "/cars/static/js/752.e1422ba5.chunk.js",
+    "static/js/227.25d36afc.chunk.js": "/cars/static/js/227.25d36afc.chunk.js",
+    "static/js/55.556e250e.chunk.js": "/cars/static/js/55.556e250e.chunk.js",
     "static/media/Manrope-VariableFont_wght.ttf": "/cars/static/media/Manrope-VariableFont_wght.4afb283bba326df875f6.ttf",
     "index.html": "/cars/index.html",
     "static/media/heart.svg": "/cars/static/media/heart.f928e865645ab10ebb69e73ea1c3c491.svg",
     "static/media/cross.svg": "/cars/static/media/cross.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
     "main.fac01281.css.map": "/cars/static/css/main.fac01281.css.map",
-    "main.ae9da9f6.js.map": "/cars/static/js/main.ae9da9f6.js.map",
+    "main.258f585f.js.map": "/cars/static/js/main.258f585f.js.map",
     "415.a004329c.chunk.js.map": "/cars/static/js/415.a004329c.chunk.js.map",
-    "752.3cc9cef3.chunk.js.map": "/cars/static/js/752.3cc9cef3.chunk.js.map",
-    "395.49a3b440.chunk.js.map": "/cars/static/js/395.49a3b440.chunk.js.map",
-    "55.504e6f5b.chunk.js.map": "/cars/static/js/55.504e6f5b.chunk.js.map"
+    "752.e1422ba5.chunk.js.map": "/cars/static/js/752.e1422ba5.chunk.js.map",
+    "227.25d36afc.chunk.js.map": "/cars/static/js/227.25d36afc.chunk.js.map",
+    "55.556e250e.chunk.js.map": "/cars/static/js/55.556e250e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fac01281.css",
-    "static/js/main.ae9da9f6.js"
+    "static/js/main.258f585f.js"
   ]
 }

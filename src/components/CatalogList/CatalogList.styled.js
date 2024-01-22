@@ -38,7 +38,8 @@ export const Ul = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 29px;
+  column-gap: 29px;
+  row-gap: 50px;
 `;
 
 export const Li = styled.li`
@@ -109,4 +110,7 @@ export const Button = styled.button`
   background: #3470ff;
   color: #ffffff;
   border: none;
+  &:hover {
+    background: #0b44cd;
+  }
 `;

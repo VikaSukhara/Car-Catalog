@@ -6,11 +6,11 @@ import {
   selectFavorite,
   selectFavouriteIDs,
 } from '../redux/catalog/selectors.jsx';
+import { Container, NoParag } from './Favorites.styled.js';
 
 const FavoriteList = () => {
   const favoritesId = useSelector(selectFavouriteIDs);
 
-  console.log('store favourites', favoritesId);
   const favourites = useSelector(selectFavorite);
 
   const dispatch = useDispatch();
@@ -21,7 +21,15 @@ const FavoriteList = () => {
 
   return (
     <div>
-      <Cataloglist catalogCars={favourites} />
+      <Container>
+        <div style={{ marginTop: '127px' }}>
+          {favourites.length > 0 ? (
+            <Cataloglist catalogCars={favourites} />
+          ) : (
+            <NoParag>You don't have any favorite cars</NoParag>
+          )}
+        </div>
+      </Container>
     </div>
   );
 };

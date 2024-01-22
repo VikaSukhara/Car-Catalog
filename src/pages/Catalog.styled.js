@@ -8,4 +8,7 @@ export const Button = styled.button`
   border: none;
   background: transparent;
   margin: 100px auto;
+  &:hover{
+    background: #0B44CD;
+  }
 `;

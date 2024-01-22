@@ -20,6 +20,7 @@ import {
   ParagWrapTwo,
   ImgCross,
   GeneralWraper,
+  Stick,
 } from './Modal.styled';
 import cross from '../img/cross.svg';
 
@@ -56,12 +57,12 @@ export const Modal = ({ car, close }) => {
             </Div>
           </TitleWrap>
           <ParagWrap>
-            <Parag>{car.address.slice(20)} |</Parag>
-            <Parag>Id: {car.id} |</Parag>
-            <Parag>Year: {car.year} |</Parag>
-            <Parag>Type: {car.type} |</Parag>
-            <Parag>FuelConsumption: {car.fuelConsumption} |</Parag>
-            <Parag>EngineSize: {car.engineSize} |</Parag>
+            <Parag>{car.address.slice(20)} <Stick>|</Stick></Parag>
+            <Parag>Id: {car.id} <Stick>|</Stick></Parag>
+            <Parag>Year: {car.year} <Stick>|</Stick></Parag>
+            <Parag>Type: {car.type} <Stick>|</Stick></Parag>
+            <Parag>FuelConsumption: {car.fuelConsumption} <Stick>|</Stick> </Parag>
+            <Parag>EngineSize: {car.engineSize} <Stick>|</Stick></Parag>
           </ParagWrap>
 
           <Paragr>{car.description}</Paragr>
@@ -69,10 +70,10 @@ export const Modal = ({ car, close }) => {
 
           <ParagWrapTwo>
             {car.accessories.map(accessory => {
-              return <Parag key={car.id}>{accessory}</Parag>;
+              return <Parag key={car.id}>{accessory} <Stick>|</Stick></Parag>;
             })}
             {car.functionalities.map(functionality => {
-              return <Parag>{functionality}</Parag>;
+              return <Parag>{functionality} <Stick>|</Stick></Parag>;
             })}
           </ParagWrapTwo>
 

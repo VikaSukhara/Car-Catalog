@@ -11,6 +11,7 @@ export const Form = styled.form`
   gap: 18px;
   align-items: center;
   justify-content: center;
+  align-items: end;
 `;
 
 export const Label = styled.label`
@@ -20,24 +21,20 @@ export const Label = styled.label`
   font-style: normal;
   font-weight: 500;
   line-height: 18px; /* 128.571% */
-  margin-bottom: 8px;
 `;
 
 export const Select = styled.select`
   display: flex;
+  width: 48px;
   padding: 14px 18px 14px 18px;
-
-  /* width: 224px; */
   justify-content: center;
   align-items: center;
   gap: 32px;
   border-radius: 14px;
   background: #f7f7fb;
   border: none;
-  /* &.option{
-    color: red,
-    background-color: blue;
-} */
+  margin-top: 8px;
+
 `;
 
 export const Input = styled.input`

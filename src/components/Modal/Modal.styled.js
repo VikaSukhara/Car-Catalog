@@ -113,10 +113,17 @@ export const Parag = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  padding-left: 6px;
+  margin-left: 6px;
   margin-top: 0;
   margin-bottom: 0;
 `;
+
+
+
+export const Stick = styled.span`
+  color:#D8D6D4 ;
+`;
+
 
 export const ParagWrap = styled.div`
   width: 350px;
@@ -198,6 +205,9 @@ export const OrderButton = styled.button`
   border: none;
   margin-top: 16px;
   margin-bottom: 40px;
+  &:hover{
+    background: #0B44CD
+  }
 `;
 
 export const A = styled.a`

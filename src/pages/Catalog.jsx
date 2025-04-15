@@ -17,9 +17,6 @@ const Catalog = () => {
   const filteredCars = useSelector(selectFilteredCars);
 
   useEffect(() => {
-    if (page === 1 && filteredCars.length) {
-      return;
-    }
     dispatch(fetchCatalog(page));
   }, [dispatch, page]);
 

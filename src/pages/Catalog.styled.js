@@ -2,13 +2,17 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   display: flex;
-  color: #3470ff;
-  font-size: 16px;
-  text-decoration-line: underline;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-size: 18px;
+  background: green;
+  color: #ffffff;
   border: none;
-  background: transparent;
+  height: 48px;
+  width: 136px;
   margin: 100px auto;
-  &:hover{
-    background: #0B44CD;
+  &:hover {
+    background: rgb(11, 90, 39);
   }
 `;

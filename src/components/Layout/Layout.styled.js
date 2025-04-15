@@ -1,25 +1,40 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+export const Header = styled.header`
+  padding: 50px 218px;
+`;
 export const Nav = styled.nav`
   margin: 0 auto;
-  gap: 20px;
+  gap: 30px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
-  a.active {
-    color: rgb(52, 112, 255);
-  }
-  
-  a:hover {
-    color: rgb(52, 112, 255);
-  }
 `;
 export const StyledLink = styled(NavLink)`
-  color: #121417;
-  font-size: 30px;
+  color: green;
+  font-size: 40px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 24px;
+  position: relative;
+
+  transition: transform 0.3 ease;
+
+  &.active::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    width: 50%;
+    height: 3px;
+    background-color: green;
+
+    transform: translateX(-50%);
+    margin-top: 20px;
+  }
+
+  &:hover {
+    transform: scale(1.08);
+  }
 `;

@@ -8,7 +8,7 @@ const Favorites = lazy(() => import('../pages/Favorites.jsx'));
 
 export const App = () => {
   return (
-    <div>
+    <div style={{ width: '1440px', margin: "0 auto"}}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

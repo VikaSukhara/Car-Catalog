@@ -23,17 +23,15 @@ export const ModalWrap = styled.div`
   border-radius: 10px;
   background-color: white;
   width: 541px;
-  height: 752px;
 `;
 
 export const GeneralWraper = styled.div`
   padding: 40px 36px 0 35px;
-  height: 752px;
 `;
 
 export const Button = styled.button`
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
   position: absolute;
   top: 16px;
   right: 16px;
@@ -70,9 +68,9 @@ export const ImgCross = styled.img``;
 
 export const Title = styled.p`
   color: #121417;
-  font-size: 18px;
+  font-size: 22px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 24px;
 `;
 export const Rental = styled.h2`
@@ -113,24 +111,19 @@ export const Parag = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  margin-left: 6px;
-  margin-top: 0;
-  margin-bottom: 0;
 `;
-
-
 
 export const Stick = styled.span`
-  color:#D8D6D4 ;
+  color: #d8d6d4;
+  margin: 0 5px;
 `;
-
 
 export const ParagWrap = styled.div`
   width: 350px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 `;
 
 export const ParagWrapTwo = styled.div`
@@ -159,8 +152,6 @@ export const ConditionWrap = styled.div`
 
 export const Paragraph = styled.p`
   display: flex;
-  /* padding-left: 14px;
-padding-right: 14px; */
   justify-content: center;
   align-items: center;
   gap: 3px;
@@ -184,7 +175,7 @@ padding-right: 14px; */
 `;
 
 export const Span = styled.span`
-  color: #3470ff;
+  color: green;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
@@ -198,15 +189,15 @@ export const OrderButton = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  background: #3470ff;
+  background: green;
   color: #ffffff;
   width: 168px;
   height: 44px;
   border: none;
   margin-top: 16px;
   margin-bottom: 40px;
-  &:hover{
-    background: #0B44CD
+  &:hover {
+    background: rgb(11, 90, 39);
   }
 `;
 

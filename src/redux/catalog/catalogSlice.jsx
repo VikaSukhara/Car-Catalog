@@ -15,6 +15,7 @@ export const catalogSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
+    hasMore: false,
   },
   extraReducers: builder => {
     builder

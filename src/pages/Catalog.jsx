@@ -12,8 +12,8 @@ import { Button } from './Catalog.styled.js';
 const Catalog = () => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
-  const isLoading = useSelector(selectLoading);
 
+  const isLoading = useSelector(selectLoading);
   const filteredCars = useSelector(selectFilteredCars);
 
   useEffect(() => {
@@ -21,15 +21,13 @@ const Catalog = () => {
       return;
     }
     dispatch(fetchCatalog(page));
-
-    //eslint-disable-next-line
   }, [dispatch, page]);
 
   return (
     <div style={{ marginTop: '30px' }}>
       <SearchForm />
       <Cataloglist catalogCars={filteredCars} />
-      {!isLoading && filteredCars.length % 12 === 0 && (
+      {!isLoading && filteredCars.length !== 24 && (
         <Button type="button" onClick={() => setPage(page + 1)}>
           Load more
         </Button>

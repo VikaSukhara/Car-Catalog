@@ -16,7 +16,6 @@ import {
   Span,
   OrderButton,
   A,
-  Paragr,
   ParagWrapTwo,
   ImgCross,
   GeneralWraper,
@@ -31,8 +30,12 @@ export const Modal = ({ car, close }) => {
         close();
       }
     };
+    document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', handleEsc);
-    return () => document.removeEventListener('keydown', handleEsc);
+    return () => {
+      document.removeEventListener('keydown', handleEsc);
+      document.body.style.overflow = 'auto';
+    };
   }, [close]);
 
   const handleBackDrop = event => {
@@ -57,23 +60,40 @@ export const Modal = ({ car, close }) => {
             </Div>
           </TitleWrap>
           <ParagWrap>
-            <Parag>{car.address.slice(20)} <Stick>|</Stick></Parag>
-            <Parag>Id: {car.id} <Stick>|</Stick></Parag>
-            <Parag>Year: {car.year} <Stick>|</Stick></Parag>
-            <Parag>Type: {car.type} <Stick>|</Stick></Parag>
-            <Parag>FuelConsumption: {car.fuelConsumption} <Stick>|</Stick> </Parag>
-            <Parag>EngineSize: {car.engineSize} <Stick>|</Stick></Parag>
+            <Parag>
+              {car.address.slice(20)} <Stick>|</Stick>
+            </Parag>
+            <Parag>
+              Id: {car.id} <Stick>|</Stick>
+            </Parag>
+            <Parag>
+              Year: {car.year} <Stick>|</Stick>
+            </Parag>
+            <Parag>Type: {car.type} </Parag>
+            <Parag>
+              FuelConsumption: {car.fuelConsumption} <Stick>|</Stick>{' '}
+            </Parag>
+            <Parag>
+              EngineSize: {car.engineSize} <Stick>|</Stick>
+            </Parag>
           </ParagWrap>
 
-          <Paragr>{car.description}</Paragr>
           <Accessories>Accessories and functionalities:</Accessories>
 
           <ParagWrapTwo>
-            {car.accessories.map(accessory => {
-              return <Parag key={car.id}>{accessory} <Stick>|</Stick></Parag>;
+            {car.accessories.map((accessory, index) => {
+              return (
+                <Parag key={`accessory-${index}`}>
+                  {accessory} <Stick>|</Stick>
+                </Parag>
+              );
             })}
-            {car.functionalities.map(functionality => {
-              return <Parag>{functionality} <Stick>|</Stick></Parag>;
+            {car.functionalities.map((functionality, index) => {
+              return (
+                <Parag key={`functionality-${index}`}>
+                  {functionality} <Stick>|</Stick>
+                </Parag>
+              );
             })}
           </ParagWrapTwo>
 
@@ -93,7 +113,9 @@ export const Modal = ({ car, close }) => {
             </Paragraph>
           </ConditionWrap>
           <OrderButton type="buttom">
-            <A href="tel:+380730000000">Rental Car</A>
+            <A href="tel:+380730000000" onClick={() => close()}>
+              Rental Car
+            </A>
           </OrderButton>
         </GeneralWraper>
       </ModalWrap>

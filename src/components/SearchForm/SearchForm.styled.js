@@ -15,9 +15,9 @@ export const Form = styled.form`
 `;
 
 export const Label = styled.label`
-  color: #8a8a89;
+  color: rgb(84, 84, 84);
   font-family: Manrope;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 18px; /* 128.571% */
@@ -34,7 +34,6 @@ export const Select = styled.select`
   background: #f7f7fb;
   border: none;
   margin-top: 8px;
-
 `;
 
 export const Input = styled.input`
@@ -42,24 +41,28 @@ export const Input = styled.input`
   justify-content: center;
   align-items: center;
   gap: 32px;
-  border-radius: 14px;
-  background: #f7f7fb;
-  width: 160px;
-  height: 48px;
-  align-items: center;
-  width: 160px;
-  height: 48px;
-  padding-left: 24px;
-  box-sizing: border-box;
 
-  background: #f7f7fb;
+  border-radius: 14px;
+  background: #f8f8fa;
+
+  width: 160px;
+  height: 56px;
+  padding-left: 24px;
+
   border: none;
+  margin-top: 15px;
+  &::placeholder {
+    color: #0b0b0b;
+    font-weight: 500;
+    font-family: Manrope;
+    font-size: 16px;
+  }
 `;
 
 export const InputWrap = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 8px;
+  gap: 5px;
 `;
 
 export const Button = styled.button`
@@ -67,9 +70,13 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  background: #3470ff;
+  font-size: 18px;
+  background: green;
   color: #ffffff;
   border: none;
-  height: 48px;
-  width: 136px;
+  height: 58px;
+  padding: 0 70px;
+  &:hover {
+    background: rgb(11, 90, 39);
+  }
 `;

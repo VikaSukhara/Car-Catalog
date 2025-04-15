@@ -43,10 +43,20 @@ export const Cataloglist = ({ catalogCars }) => {
     setisOpen(true);
     setSelectedCar(car);
   };
-
   const handleModalClose = () => {
     setisOpen(false);
-    selectedCar(null);
+    setSelectedCar(null);
+  };
+
+  const getCityFromAddress = address => {
+    const parts = address.split(','); // converted to an array and separated by a comma
+    if (parts.length >= 2) {
+      return parts[parts.length - 2].trim();
+      // arr.length = 3;
+      // 3-2(index of Ukraine) = 1(index of the city)
+      // trim() - delete spaces
+    }
+    return '';
   };
 
   return (
@@ -61,17 +71,19 @@ export const Cataloglist = ({ catalogCars }) => {
                 <Img src={car.img} alt="img auto" />
 
                 <HeartBtn id={car.id} onClick={handleFavorite}>
-                  <Heart fill={isFavourite ? '#3470FF' : 'none'} />
+                  <Heart fill={isFavourite ? 'green' : 'none'} />
                 </HeartBtn>
                 <TitleWrap>
                   <Div>
-                    <Title>{car.make},</Title>
-                    <Title>{car.year}</Title>
+                    <Title>{car.make}, </Title>
+                    <Title style={{ marginLeft: '2px' }}> {car.year}</Title>
                   </Div>
                   <Title>{car.rentalPrice}</Title>
                 </TitleWrap>
                 <ParagWrap>
-                  <Parag>{car.address.slice(20, 24)} |</Parag>
+                  {/* <Parag>{car.address.slice(20, 24)} |</Parag> */}
+                  <Parag>{getCityFromAddress(car.address)} |</Parag>
+
                   <Parag>Ukraine |</Parag>
                   <Parag>{car.rentalCompany} |</Parag>
                   <Parag>{car.type} </Parag>

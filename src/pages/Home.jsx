@@ -1,4 +1,4 @@
-import { Container, Parag, Title, Wraper } from './Home.styled';
+import { Button, Container, Parag, Title, Wraper } from './Home.styled';
 
 const Home = () => {
   return (
@@ -9,6 +9,7 @@ const Home = () => {
           We offer machines of different brands and different price categories
         </Parag>
         <Parag>Go to the categories and choose your car</Parag>
+        <Button to="/catalog">Choose the car</Button>
       </Wraper>
     </Container>
   );

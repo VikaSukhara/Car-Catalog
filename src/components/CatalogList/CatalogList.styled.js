@@ -9,13 +9,14 @@ export const Heart = styled(HeartIcon)`
   color: white;
   width: 18px;
   height: 18px;
+  
   transition: fill scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     scale: 1.1;
   }
   &:focus {
-    fill: #3470ff;
-    color: #3470ff;
+    fill: green;
+    color: green;
   }
 `;
 
@@ -101,16 +102,17 @@ export const ParagWrap = styled.div`
 
 export const Button = styled.button`
   display: flex;
-
   height: 44px;
+  font-size: 18px;
 
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  background: #3470ff;
+  background: green;
   color: #ffffff;
   border: none;
+  
   &:hover {
-    background: #0b44cd;
+    background:rgb(11, 90, 39); 
   }
 `;

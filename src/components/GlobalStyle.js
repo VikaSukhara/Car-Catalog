@@ -32,6 +32,9 @@ img{
     object-fit: cover;
 }
 
+button{
+ cursor: pointer}
+
 a{
  text-decoration: none;
  :hover{

@@ -11,22 +11,27 @@ import {
   Button,
   Heart,
   HeartBtn,
+  NotFoundHeading,
 } from './CatalogList.styled';
 import { Modal } from 'components/Modal/Modal';
 import { Container } from 'pages/Home.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectFavouriteIDs } from '../../redux/catalog/selectors.jsx';
+import {
+  selectFavouriteIDs,
+  selectLoading,
+} from '../../redux/catalog/selectors.jsx';
 import {
   addFavourites,
   deleteFavourites,
 } from '../../redux/favorite/favoriteSlice.jsx';
 
-export const Cataloglist = ({ catalogCars }) => {
+export const Cataloglist = ({ catalogCars, isFilteringApplied }) => {
   const dispatch = useDispatch();
   const [isOpen, setisOpen] = useState(false);
   const [selectedCar, setSelectedCar] = useState(null);
 
   const favoriteIdsState = useSelector(selectFavouriteIDs);
+  const isLoading = useSelector(selectLoading);
 
   const handleFavorite = event => {
     const id = +event.currentTarget.id;
@@ -62,6 +67,9 @@ export const Cataloglist = ({ catalogCars }) => {
   return (
     <div>
       <Container>
+        {!isLoading && catalogCars.length === 0 && isFilteringApplied && (
+          <NotFoundHeading>No cars found. Change filters.</NotFoundHeading>
+        )}
         <Ul>
           {catalogCars.map(car => {
             const isFavourite = favoriteIdsState.includes(car.id);

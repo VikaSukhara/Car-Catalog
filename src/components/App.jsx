@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from './Layout/Layout';
+import NotFound from 'pages/NotFoundPage/NotFounPage';
 
 const Home = lazy(() => import('../pages/Home.jsx'));
 const Catalog = lazy(() => import('../pages/Catalog.jsx'));
@@ -14,6 +15,7 @@ export const App = () => {
           <Route index element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </div>

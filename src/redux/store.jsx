@@ -22,11 +22,21 @@ const persistConfig = {
 };
 const persistedFavoriteReducer = persistReducer(persistConfig, favoriteReducer);
 
+
+const filtersPersistConfig = {
+  key: 'filters',
+  storage,
+};
+
+const persistedFiltersReducer = persistReducer(filtersPersistConfig, filtersReducer);
+
+
+
 export const store = configureStore({
   reducer: {
     favorite: persistedFavoriteReducer,
     catalog: catalogReducer,
-    filters: filtersReducer,
+    filters: persistedFiltersReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

@@ -3,8 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   selectChoosedModel,
   selectChoosedPrice,
+  selectMileageFrom,
+  selectMileageTo,
 } from '../../redux/filter/selectors.jsx';
-import { modelReducer, priceReducer } from '../../redux/filter/FilterSlice.jsx';
+import {
+  clearAllFilters,
+  getMileageFrom,
+  getMileageTo,
+  getModel,
+  getPrice,
+} from '../../redux/filter/FilterSlice.jsx';
 import { useState } from 'react';
 import { Button, Label, Form, Input, InputWrap } from './SearchForm.styled.js';
 import { Container } from 'pages/Home.styled.js';
@@ -13,6 +21,7 @@ const SearchForm = () => {
   const dispatch = useDispatch();
 
   const optionsModel = [
+    'Show all cars',
     'Buick',
     'Volvo',
     'HUMMER',
@@ -36,13 +45,17 @@ const SearchForm = () => {
     'Land',
   ].map(option => ({ value: option, label: option }));
 
-  const optionsPrice = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map(price => ({
-    value: price,
-    label: `$${price}`,
-  }));
+  const optionsPrice = ['To', 10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map(
+    price => ({
+      value: price,
+      label: `$${price}`,
+    })
+  );
 
   const models = useSelector(selectChoosedModel);
   const prices = useSelector(selectChoosedPrice);
+  const mileageFrom = useSelector(selectMileageFrom);
+  const mileageTo = useSelector(selectMileageTo);
 
   const [model, setModel] = useState(
     models ? { value: models, label: models } : null
@@ -51,10 +64,15 @@ const SearchForm = () => {
     prices ? { value: prices, label: `$${prices}` } : null
   );
 
+  const [localMileageFrom, setLocalMileageFrom] = useState(mileageFrom);
+  const [localMileageTo, setLocalMileageTo] = useState(mileageTo);
+
   const handleSubmit = event => {
     event.preventDefault();
-    if (model) dispatch(modelReducer(model.value));
-    if (price) dispatch(priceReducer(price.value));
+    dispatch(getModel(model?.value || 'Show all cars'));
+    if (price) dispatch(getPrice(price.value));
+    if (localMileageFrom !== '') dispatch(getMileageFrom(localMileageFrom));
+    if (localMileageTo !== '') dispatch(getMileageTo(localMileageTo));
   };
 
   const customStyles = {
@@ -125,7 +143,7 @@ const SearchForm = () => {
             value={model}
             onChange={selected => setModel(selected)}
             options={optionsModel}
-            placeholder="Enter the text"
+            placeholder="Show all cars"
             styles={customStyles}
             defaultValue={optionsModel[0]}
           />
@@ -145,11 +163,33 @@ const SearchForm = () => {
         <Label>
           Сar mileage / km
           <InputWrap>
-            <Input type="text" placeholder="From" />
-            <Input type="text" placeholder="To" />
+            <Input
+              type="text"
+              placeholder="From"
+              value={localMileageFrom}
+              onChange={e => setLocalMileageFrom(e.target.value)}
+            />
+            <Input
+              type="text"
+              placeholder="To"
+              value={localMileageTo}
+              onChange={e => setLocalMileageTo(e.target.value)}
+            />
           </InputWrap>
         </Label>
         <Button type="submit"> Search </Button>
+        <Button
+          type="button"
+          onClick={() => {
+            dispatch(clearAllFilters());
+            setModel(' ');
+            setPrice(' ');
+            setLocalMileageFrom('');
+            setLocalMileageTo('');
+          }}
+        >
+          Reset filters
+        </Button>
       </Form>
     </Container>
   );

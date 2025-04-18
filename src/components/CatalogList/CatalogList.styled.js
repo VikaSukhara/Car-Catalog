@@ -9,7 +9,7 @@ export const Heart = styled(HeartIcon)`
   color: white;
   width: 18px;
   height: 18px;
-  
+
   transition: fill scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     scale: 1.1;
@@ -33,6 +33,12 @@ export const HeartBtn = styled.button`
 export const Container = styled.div`
   padding-left: 128px;
   padding-right: 128px;
+`;
+
+export const NotFoundHeading = styled.h2`
+  text-align: center;
+  font-size: 40px;
+  margin-top: 200px;
 `;
 
 export const Ul = styled.ul`
@@ -111,8 +117,8 @@ export const Button = styled.button`
   background: green;
   color: #ffffff;
   border: none;
-  
+
   &:hover {
-    background:rgb(11, 90, 39); 
+    background: rgb(11, 90, 39);
   }
 `;

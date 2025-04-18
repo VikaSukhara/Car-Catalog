@@ -3,18 +3,38 @@ import { createSlice } from '@reduxjs/toolkit';
 export const filtersSlice = createSlice({
   name: 'filters',
   initialState: {
-    model: '',
+    model: 'Show all cars',
     price: '',
+    mileageFrom: '',
+    mileageTo: '',
   },
   reducers: {
-    modelReducer(state, action) {
+    getModel(state, action) {
       state.model = action.payload;
     },
-    priceReducer(state, action) {
+    getPrice(state, action) {
       state.price = action.payload;
+    },
+    getMileageFrom(state, action) {
+      state.mileageFrom = action.payload;
+    },
+    getMileageTo(state, action) {
+      state.mileageTo = action.payload;
+    },
+    clearAllFilters(state, action) {
+      state.model = 'Show all cars';
+      state.price = '';
+      state.mileageFrom = '';
+      state.mileageTo = '';
     },
   },
 });
 
 export const filtersReducer = filtersSlice.reducer;
-export const { modelReducer, priceReducer } = filtersSlice.actions;
+export const {
+  getModel,
+  getPrice,
+  clearAllFilters,
+  getMileageFrom,
+  getMileageTo,
+} = filtersSlice.actions;

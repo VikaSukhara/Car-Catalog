@@ -44,6 +44,7 @@ export const Modal = ({ car, close }) => {
     }
   };
 
+
   return (
     <BackDrop onClick={handleBackDrop}>
       <ModalWrap>
@@ -106,7 +107,7 @@ export const Modal = ({ car, close }) => {
             <Paragraph>Valid driver’s license</Paragraph>
             <Paragraph>Security deposite required</Paragraph>
             <Paragraph>
-              Mileage: <Span>5,858</Span>
+              Mileage: <Span>{car.mileage}</Span>
             </Paragraph>
             <Paragraph>
               Price: <Span>{car.rentalPrice}</Span>

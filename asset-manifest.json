@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/Car-Catalog/static/css/main.6a90b7f1.css",
-    "main.js": "/Car-Catalog/static/js/main.24e50983.js",
-    "static/js/264.2629702e.chunk.js": "/Car-Catalog/static/js/264.2629702e.chunk.js",
-    "static/js/511.51847099.chunk.js": "/Car-Catalog/static/js/511.51847099.chunk.js",
-    "static/js/124.226d8b29.chunk.js": "/Car-Catalog/static/js/124.226d8b29.chunk.js",
+    "main.js": "/Car-Catalog/static/js/main.5f349538.js",
+    "static/js/264.80382f8b.chunk.js": "/Car-Catalog/static/js/264.80382f8b.chunk.js",
+    "static/js/511.ad962a9a.chunk.js": "/Car-Catalog/static/js/511.ad962a9a.chunk.js",
+    "static/js/124.5ee90c6b.chunk.js": "/Car-Catalog/static/js/124.5ee90c6b.chunk.js",
     "static/js/99.cf34b73e.chunk.js": "/Car-Catalog/static/js/99.cf34b73e.chunk.js",
     "static/js/923.50566c23.chunk.js": "/Car-Catalog/static/js/923.50566c23.chunk.js",
     "static/media/Manrope-VariableFont_wght.ttf": "/Car-Catalog/static/media/Manrope-VariableFont_wght.4afb283bba326df875f6.ttf",
@@ -12,15 +12,15 @@
     "index.html": "/Car-Catalog/index.html",
     "static/media/cross.svg": "/Car-Catalog/static/media/cross.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
     "main.6a90b7f1.css.map": "/Car-Catalog/static/css/main.6a90b7f1.css.map",
-    "main.24e50983.js.map": "/Car-Catalog/static/js/main.24e50983.js.map",
-    "264.2629702e.chunk.js.map": "/Car-Catalog/static/js/264.2629702e.chunk.js.map",
-    "511.51847099.chunk.js.map": "/Car-Catalog/static/js/511.51847099.chunk.js.map",
-    "124.226d8b29.chunk.js.map": "/Car-Catalog/static/js/124.226d8b29.chunk.js.map",
+    "main.5f349538.js.map": "/Car-Catalog/static/js/main.5f349538.js.map",
+    "264.80382f8b.chunk.js.map": "/Car-Catalog/static/js/264.80382f8b.chunk.js.map",
+    "511.ad962a9a.chunk.js.map": "/Car-Catalog/static/js/511.ad962a9a.chunk.js.map",
+    "124.5ee90c6b.chunk.js.map": "/Car-Catalog/static/js/124.5ee90c6b.chunk.js.map",
     "99.cf34b73e.chunk.js.map": "/Car-Catalog/static/js/99.cf34b73e.chunk.js.map",
     "923.50566c23.chunk.js.map": "/Car-Catalog/static/js/923.50566c23.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6a90b7f1.css",
-    "static/js/main.24e50983.js"
+    "static/js/main.5f349538.js"
   ]
 }

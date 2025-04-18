@@ -337,7 +337,7 @@
   }
 `,k=()=>{const e=(0,r.wA)(),[t,i]=(0,n.useState)(1),s=(0,r.d4)(l.Nz),d=(0,r.d4)(l.dx),c=(0,r.d4)(p),f=(0,r.d4)(x),h=(0,r.d4)(l.P7),g="Show all cars"===d.model&&""===d.price&&""===c&&""===f,u="Show all cars"!==d.model||""!==d.price||""!==c||""!==f;return(0,n.useEffect)((()=>{e((0,o.S)(t))}),[e,t]),(0,w.jsxs)("div",{style:{marginTop:"30px"},children:[(0,w.jsx)(v,{}),(0,w.jsx)(a.o,{catalogCars:h,isFilteringApplied:u}),!s&&g&&24!==h.length&&(0,w.jsx)(A,{type:"button",onClick:()=>i(t+1),children:"Load more"})]})}},635:(e,t,i)=>{i.d(t,{$n:()=>d,Eo:()=>l,Ih:()=>s,hE:()=>a,mc:()=>o});var n=i(475),r=i(464);const o=r.Ay.div`
   margin-bottom: 50px;
-  width: 1184px;
+  width: 1200px;
   margin: 50px auto;
 `,l=r.Ay.div`
   margin-top: 200px;
@@ -387,4 +387,4 @@
   font-weight: 500;
   line-height: 24px;
 `},717:(e,t,i)=>{i.d(t,{Nz:()=>r,P7:()=>s,dx:()=>o,e9:()=>a,jH:()=>l});var n=i(99);const r=e=>e.catalog.isLoading,o=e=>e.filters,l=e=>e.favorite.favorite,a=e=>e.favorite.favouriteIDs,s=(0,n.Mz)([e=>e.catalog.items,o],((e,t)=>e.filter((e=>{const i="Show all cars"===t.model||e.make&&"string"===typeof t.model&&e.make.toLowerCase().includes(t.model.toLowerCase()),n=Number(e.rentalPrice.slice(1)),r=!t.price||n<=t.price,o=e.mileage,l=parseInt(t.mileageFrom,10),a=parseInt(t.mileageTo,10),s=(!t.mileageFrom||o>=l)&&(!t.mileageTo||o<=a);return i&&r&&s}))))}}]);
-//# sourceMappingURL=511.51847099.chunk.js.map
+//# sourceMappingURL=511.ad962a9a.chunk.js.map

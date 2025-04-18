@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin-bottom: 50px;
-  width: 1184px;
+  width: 1200px;
   margin: 50px auto;
 `;
 

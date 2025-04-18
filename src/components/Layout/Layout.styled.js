@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
-  padding: 50px 218px;
+  padding: 50px 100px;
 `;
 export const Nav = styled.nav`
   margin: 0 auto;
